@@ -1,0 +1,8 @@
+# NEVER commit symmetric secret keys.
+.keys/
+*.key
+.env
+__pycache__/
+*.py[cod]
+.venv/
+.pytest_cache/
