@@ -15,14 +15,15 @@ A Python command-line application that demonstrates **classical Caesar cipher** 
 
 ```text
 part1/
-├── main.py             # Interactive command-line interface
-├── classical_cipher.py # Caesar cipher encryption and decryption
-├── aes_crypto.py       # AES-256-GCM encryption and decryption
-├── key_manager.py      # Random key generation, storage and replacement
-├── demo.py             # Standalone demonstration of project requirements
-├── requirements.txt    # Python package dependency
-├── README.md           # Setup and usage instructions
-└── .gitignore          # Excludes local secret keys and temporary files
+├── main.py
+├── classical_cipher.py
+├── aes_crypto.py
+├── key_manager.py
+├── demo.py
+├── test_crypto.py
+├── requirements.txt
+├── README.md
+└── .gitignore
 ```
 
 The `.keys/` directory and `.keys/aes.key` file are **created locally when needed**; they are not included in the submission. Do not commit or send your real secret key.
@@ -132,6 +133,18 @@ The demonstration covers plaintext → ciphertext, ciphertext → plaintext, wro
 - `.keys/aes.key` contains the **Base64-encoded plaintext secret key**; Base64 is **not encryption**. Local file protection is suitable for classroom demonstration, not production-level key security.
 - The new key is written to a temporary file before replacing the saved key. Replacement requires user confirmation and does not guarantee secure erasure of older copies.
 - Never hard-code secret keys, publish `.keys/`, or reuse the same AES-GCM (key, nonce) pair. Production systems should use proper access controls and secure key storage (such as a keystore or KMS).
+
+## Automated Tests
+
+The project includes 14 functional tests covering Caesar Cipher, AES-256-GCM encryption and decryption, incorrect keys, modified ciphertext, key generation, key storage, and key replacement.
+
+To run the tests, open a terminal inside the `part1` directory and execute:
+
+```bash
+python -m unittest discover -s . -p "test_crypto.py" -v
+```
+
+All 14 tests passed during verification. These tests check expected functionality and do not constitute a formal security audit.
 
 ## References
 
