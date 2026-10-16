@@ -1,0 +1,26 @@
+COMP5507 Secure Message System - Functional Test Results
+
+Command:
+python -m unittest discover -s tests -v
+
+Result:
+Ran 14 tests in 0.011s
+OK
+
+Tests covered:
+1. Caesar known-example encryption
+2. Caesar known-example decryption
+3. Caesar case/punctuation/digit handling
+4. Caesar invalid shift rejection
+5. Caesar non-string input rejection
+6. AES encryption/decryption round trip
+7. AES Unicode, empty, and multiline messages
+8. Fresh nonce for repeated encryption
+9. Wrong AES key rejection
+10. Modified ciphertext rejection
+11. Malformed AES token rejection
+12. 256-bit key generation and Base64 round trip
+13. Key save/load and overwrite prevention
+14. Key replacement updates the saved key
+
+Note: These tests verify expected functional behavior; they are not a formal security audit.
