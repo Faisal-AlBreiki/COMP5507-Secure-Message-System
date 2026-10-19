@@ -148,6 +148,6 @@ All 14 tests passed during verification. These tests check expected functionalit
 
 ## References
 
-- COMP5507 Project Part 1 — Classical & Symmetric Cryptography (assignment brief)
+- COMP5507 Project Part 1 - Classical & Symmetric Cryptography (assignment brief)
 - Python `secrets` documentation: https://docs.python.org/3/library/secrets.html
 - `cryptography` AESGCM documentation: https://cryptography.io/en/stable/hazmat/primitives/aead/#cryptography.hazmat.primitives.ciphers.aead.AESGCM
